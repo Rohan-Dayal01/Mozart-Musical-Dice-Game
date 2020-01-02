@@ -1,9 +1,4 @@
-# Rohan Dayal
-# rdayal
-# 112768867
-# 
-# 11/20/2019
-# musical_dice_game.py
+
 
 import random
 import simpleaudio
@@ -36,8 +31,7 @@ minuet_table = [mm01, mm02, mm03, mm04, mm05, mm06, mm07, mm08,
             mm09, mm10, mm11, mm12, mm13, mm14, mm15, mm16]
 
 # Each of these lists corresponds to one column of the table used for the trio
-# portion Mozart's Musical Dice Game. The first two elements are set to None
-# because, there is no way for a roll of two dice to return a 0 or a 1. Only the
+# portion Mozart's Musical Dice Game. Only the
 # indices that can be the result of the roll of one die have a value.
 # Each value is the number labelling a possible musical choice for that measure.
 tm01 = [None, "72", "56", "75", "40", "83", "18"]
@@ -82,14 +76,12 @@ def roll_dice(num = 1):#means that defaul num value is 1, unless specified as so
         added+=random.randrange(1,7)
     return added
 
-# Inside this main function you will randomly select 16 measures from the minuet
+# Inside this main function randomly select 16 measures from the minuet
 # table, one from each column of the minuet table, and then randomly select, 16
 # measures from the trio table, one from each column of the trio table. Each
 # measure is represented by a string numeral, and corresponds to the name of a
 # wav audio file that plays the selected measure of music.
-# You must then access each of the selected wav files and play them using
-# simpleaudio's interface. Make sure you wait for each measure to finish before
-# playing the next measure.
+
 def construct_waltz():
     waltzmsrs = []
     for x in range(16):
